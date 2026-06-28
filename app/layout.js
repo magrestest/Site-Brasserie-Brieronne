@@ -4,6 +4,8 @@ import { site } from "@/lib/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { HopSymbol } from "@/components/Hop";
+import CartProvider from "@/components/CartProvider";
+import CartDrawer from "@/components/CartDrawer";
 
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
@@ -46,9 +48,12 @@ export default function RootLayout({ children }) {
     <html lang="fr" className={`${serif.variable} ${titre.variable} ${corps.variable}`}>
       <body>
         <HopSymbol />
-        <Header />
-        <main>{children}</main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );

@@ -3,10 +3,13 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { site } from "@/lib/site";
+import { useCart } from "@/components/CartProvider";
+import { CART_ICON } from "@/components/GoodIcons";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const { count, open: openCart } = useCart();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -40,6 +43,10 @@ export default function Header() {
           <a href={site.contact.telephoneLien} className="tel">
             {site.contact.telephone}
           </a>
+          <button className="header-cart" onClick={openCart} aria-label="Voir le panier">
+            {CART_ICON}
+            {count > 0 && <span className="header-cart-badge">{count}</span>}
+          </button>
         </nav>
       </div>
     </header>
