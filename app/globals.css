@@ -510,3 +510,16 @@ img{ max-width:100%; display:block; }
 
 @media(max-width:880px){ .unit-grid,.offer-grid{ grid-template-columns:1fr 1fr; } }
 @media(max-width:520px){ .unit-grid,.offer-grid{ grid-template-columns:1fr; } }
+
+/* ===================================================================
+   Page confirmation de commande + actions panier
+   =================================================================== */
+.cart-actions{ display:flex; flex-direction:column; gap:10px; }
+.cart-actions .btn{ width:100%; text-align:center; cursor:pointer; }
+.cart-actions .btn:disabled{ opacity:.55; cursor:not-allowed; }
+
+.order-done{ background:var(--noir); min-height:62vh; display:flex; align-items:center; text-align:center; }
+.order-done .wrap{ max-width:620px; }
+.order-done-ic{ width:74px; height:74px; border-radius:50%; background:var(--sapin); color:var(--or-clair); display:flex; align-items:center; justify-content:center; font-size:2rem; margin:0 auto 24px; }
+.order-done h1{ font-family:var(--serif); font-weight:500; font-size:clamp(2rem,4vw,2.9rem); color:var(--creme); line-height:1.1; }
+.order-done p{ color:var(--creme-soft); margin:16px auto 28px; font-size:1.04rem; max-width:48ch; }
