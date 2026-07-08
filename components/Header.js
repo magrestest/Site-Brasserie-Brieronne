@@ -17,6 +17,13 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <header className={`site-header ${scrolled ? "scrolled" : ""}`}>
       <div className="wrap nav">
@@ -26,8 +33,8 @@ export default function Header() {
         </Link>
 
         <button
-          className="burger"
-          aria-label="Ouvrir le menu"
+          className={`burger ${open ? "is-open" : ""}`}
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
           aria-expanded={open}
           onClick={() => setOpen((v) => !v)}
         >
