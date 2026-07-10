@@ -568,3 +568,12 @@ img{ max-width:100%; display:block; }
 
 @media(max-width:880px){ .pro-args,.steps-grid{ grid-template-columns:1fr 1fr; } .pro-fut{ grid-template-columns:1fr; gap:40px; } .pro-fut-visual{ max-width:320px; margin:0 auto; } }
 @media(max-width:520px){ .pro-args,.steps-grid{ grid-template-columns:1fr; } .pf-row{ grid-template-columns:1fr; } }
+
+/* ===================== Section territoire (bannière marais) ===================== */
+.territoire{ padding:108px 0; background:var(--noir-2); }
+.territoire-text{ max-width:64ch; margin:0 auto; text-align:center; }
+.territoire-text .eyebrow{ justify-content:center; }
+.territoire-text h2{ font-family:var(--serif); font-weight:500; font-size:clamp(2rem,3.6vw,3rem); color:var(--creme); line-height:1.1; margin:18px 0 22px; }
+.territoire-text p{ color:var(--creme-soft); font-size:1.02rem; margin:0 auto 18px; max-width:56ch; }
+.territoire-photo{ margin-top:52px; border-radius:6px; overflow:hidden; border:1px solid rgba(201,162,75,.22); box-shadow:0 30px 60px -32px rgba(0,0,0,.65); }
+.territoire-photo img{ width:100%; height:auto; display:block; }

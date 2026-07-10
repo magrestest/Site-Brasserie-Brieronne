@@ -43,9 +43,9 @@ export default function BrasseriePage() {
       </section>
 
       {/* Territoire */}
-      <section className="editorial alt reverse">
+      <section className="territoire">
         <div className="wrap">
-          <Reveal as="div" className="ed-text">
+          <Reveal as="div" className="territoire-text">
             <span className="eyebrow">Le territoire</span>
             <h2>La Brière n'est pas un décor. C'est la matière.</h2>
             <p>
@@ -58,16 +58,11 @@ export default function BrasseriePage() {
               chaumière, une tourbière. Une manière de garder le marais dans chaque bouteille.
             </p>
           </Reveal>
-          <Reveal as="div" delay={120}>
-            <div className="ed-visual">
-              <div className="ph">
-                <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M3 20h18M4 20c2-6 4-9 8-9s6 3 8 9M8 11V4M16 11V6" />
-                </svg>
-                Photo des marais
-                <br />à venir
-              </div>
-            </div>
+          <Reveal as="div" className="territoire-photo" delay={120}>
+            <img
+              src="/marais-briere.jpg"
+              alt="Les marais de la Brière au coucher du soleil"
+            />
           </Reveal>
         </div>
       </section>
