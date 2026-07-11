@@ -17,7 +17,7 @@ export default function Home() {
           <img
             className="hero-img"
             src="/hero-atelier.jpg"
-            alt={`La gamme des six bières de la ${site.nom}, brassées à ${site.contact.adresse.ville}`}
+            alt={`L'atelier de brassage de la ${site.nom}, à ${site.contact.adresse.ville}`}
           />
           <div className="hero-veil" />
         </div>
