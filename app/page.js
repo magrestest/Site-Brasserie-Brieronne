@@ -17,7 +17,7 @@ export default function Home() {
           <img
             className="hero-img"
             src="/hero-atelier.jpg"
-            alt={`L'atelier de brassage de la ${site.nom}, à ${site.contact.adresse.ville}`}
+            alt={`La gamme des six bières de la ${site.nom}, brassées à ${site.contact.adresse.ville}`}
           />
           <div className="hero-veil" />
         </div>
@@ -60,13 +60,10 @@ export default function Home() {
           </Reveal>
           <Reveal delay={120}>
             <div className="intro-visual">
-              <div className="ph">
-                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2">
-                  <path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6" />
-                </svg>
-                Photo de l'atelier
-                <br />à venir
-              </div>
+              <img
+                src="/atelier.jpg"
+                alt={`L'atelier de brassage de la ${site.nom}, à ${site.contact.adresse.ville}`}
+              />
             </div>
           </Reveal>
         </div>
