@@ -36,7 +36,7 @@ export default function BrasseriePage() {
           </Reveal>
           <Reveal as="div" delay={120}>
             <div className="ed-visual">
-              <img src="/hero-atelier.jpg" alt="L'atelier de la Brasserie Briéronne" />
+              <img src="/histoire.jpg" alt="La Cabane Bleue, notre blonde, entourée de malt et de houblon" />
             </div>
           </Reveal>
         </div>
