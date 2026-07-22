@@ -25,7 +25,7 @@ export default function GoodsShop() {
       prixUnit: g.prix,
       qty: 1,
       meta: `${taille ? `Taille ${taille} · ` : ""}${formatPrix(g.prix)}/u`,
-      thumb: { t: "icon", name: g.icon },
+      thumb: g.image ? { t: "img", src: g.image } : { t: "icon", name: g.icon },
       taille,
       mergeId: `goodie:${g.id}:${taille || ""}`,
     });
@@ -36,8 +36,14 @@ export default function GoodsShop() {
       {goodies.map((g) => (
         <div className="good-card" key={g.id}>
           <div className="good-visual">
-            {GOOD_ICONS[g.icon]}
-            <span className="good-ph">Visuel à venir</span>
+            {g.image ? (
+              <img src={g.image} alt={g.nom} />
+            ) : (
+              <>
+                {GOOD_ICONS[g.icon]}
+                <span className="good-ph">Visuel à venir</span>
+              </>
+            )}
           </div>
           <div className="good-body">
             <h3>{g.nom}</h3>
